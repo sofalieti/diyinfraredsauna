@@ -1,0 +1,1 @@
+<img src="/images/8x8-large.png" class="w-100" data-width="8" data-depth="8" data-height="6"/>

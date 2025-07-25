@@ -1,0 +1,225 @@
+@media (min-width: 992px) {
+    .top-menu li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+    .top-menu li.dropdown:hover > .dropdown-menu {
+        display: block;    
+    }
+}
+@media (max-width: 1200px) {
+    .main-banner .banner-info{
+        max-width: 95%;
+        width: 95%;
+    }
+    .logo-block img{
+        max-width: 100%;
+    }
+    .phones-block .phone a{
+        font-size: 16px;
+    }
+    ul.stepper.horizontal .step .step-title{
+        padding-right: 10px !important;
+    }
+    .configure-you-diy-sauna-form .g-recaptcha {
+        transform: scale(0.67);
+        transform-origin: top left;
+    }
+}
+@media (max-width: 992px) {
+    .phones-block{
+        display: none;
+    }
+    header .navbar-toggler{
+        padding: 15px;
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 17px;
+        width: 135px;
+        text-align: left;
+    }
+    header .navbar-toggler span{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .top-menu.navbar-expand-lg .navbar-nav .nav-link {
+        color: #FFF;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 17px;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+    }
+    header .top-btn{
+        padding: 14px 13px;
+        width: 45px;
+        min-width: 0;
+        font-size: 13px
+    }
+    header video {
+        width: auto;
+        height: 100%;
+    }
+    .main-banner, header.with-video-banner{
+        min-height: 300px;
+    }
+    header .navbar-collapse{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 51px;
+        background: #E47F36;
+    }
+    header .container{
+        max-width: 100%;
+    }
+    body{
+        margin-bottom: 0;
+    }
+    footer{
+        position: relative;
+        height: auto;
+        text-align: center;
+        line-height: 30px;
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+    header {
+        padding-top: 53px;
+        overflow: hidden;
+        position: relative;
+        background: #edeff1;
+        margin-bottom: 15px;
+    }
+    ul.stepper .step.active::before, ul.stepper .step.done::before{
+        background: #E47F36;
+    }
+    ul.stepper .step.wrong::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f12a";
+        font-size: 13px;
+        background: red;
+    }
+    ul.stepper.horizontal .step.wrong .step-title::before{
+        display: none;
+    }
+    ul.stepper .step.done::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f00c";
+        font-size: 13px;
+        background: #E47F36;
+    }
+    ul.stepper.horizontal .step.done .step-title::before{
+        display: none;
+    }
+    ul.stepper .step .step-title:hover{
+        background: none;
+    }
+    .stepper h3{
+        font-size: 18px;
+    }
+    .stepper .description{
+        font-size: 14px;
+    }
+    #kits_type, .pc-block{
+        flex-wrap: wrap;        
+    }
+    .pc-kit-item, .pc-block > label{
+        width: calc(33% - 15px);
+        margin-bottom: 15px;
+    }
+    .pc-kit-item img, .pc-block > label img{
+        max-width: 100%;
+    }
+    .configure-you-diy-sauna-form .g-recaptcha {
+        transform: scale(0.77);
+        transform-origin: top right;
+    }
+    ul.stepper.horizontal .step .step-content .step-actions{
+        display: flex;
+        justify-content: center;
+    }
+    ul.stepper.horizontal .step .step-content .step-actions > button:first-child{
+        order: 2;
+    }
+    ul.stepper.horizontal .step .step-content .step-actions > button:last-child{
+        order: 1;
+        margin-right: 5px;
+    }
+    .top-menu .dropdown-menu{
+        box-shadow: none;
+    }
+    .top-menu .dropdown-menu .dropdown-item{
+        padding: 15px 20px;
+        border-top: 1px solid #e39545;
+    }
+    .main-banner .banner-info{
+        margin-top: 50px;
+    }
+    .layout-shape{
+        padding: 5px;
+    }
+    .layout-shape > div{
+        height: 300px !important;
+    }
+    .layout-shape img{
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+@media (max-width: 768px) {
+    .main-banner h1{
+        font-size: 25px;
+    }
+    .main-banner .banner-info .description{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .main-banner .btn-primary{
+        padding: 13px 23px;
+        font-size: 14px;
+    }
+    h1.title, h2.title, h3.title, h4.title {
+        margin: 10px 0 10px 0;
+        font-size: 25px;
+    }
+    .pc-kit-item, .pc-block > label{
+        width: calc(50% - 15px);
+        margin-bottom: 15px;
+    }
+    .pc-kit-item{
+        width: 40%;
+    }
+    .projects-block .media-preview.image-block{
+        padding-bottom: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .project-images.card-columns{
+        column-count: 2;
+        column-gap: 1.25rem;
+        orphans: 1;
+        widows: 1;
+    }
+    .pc-kit-item, .pc-block > label{
+        font-size: 11px;
+    }
+    .configure-you-diy-sauna-form .g-recaptcha {
+        transform: scale(0.77);
+        transform-origin: top left;
+    }
+    .layout-shape > div{
+        height: auto !important;
+    }
+    .layout-shape img{
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+    
+    
+    .pc-kit-item{
+        width: 100%;
+    }
+    
+}
