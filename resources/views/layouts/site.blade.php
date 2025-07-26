@@ -155,6 +155,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         @show
+        
+                 @include('blocks.sticky-help-block')
+        
         @section('javascript')
         <script type="text/javascript" src="{!! asset('/js/popper.min.js') !!}"></script>
         <script type="text/javascript" src="{!! asset('/js/jquery-3.4.0.min.js') !!}"></script>
