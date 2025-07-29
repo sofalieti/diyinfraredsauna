@@ -264,7 +264,7 @@
                 Next<i class="fas fa-arrow-right ml-2"></i>
             </button>
             <button type="submit" class="btn btn-success btn-lg" id="submitBtn-premade" style="display: none;">
-                <i class="fas fa-paper-plane mr-2"></i>Submit Request
+                <i class="fas fa-paper-plane mr-2"></i>Send
             </button>
         </div>
     </form>

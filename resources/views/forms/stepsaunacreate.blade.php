@@ -346,7 +346,7 @@
             </button>
               <button type="submit" id="submitBtn-diy" class="btn btn-success" style="display: none;">
                 <i class="fas fa-paper-plane me-2"></i>
-                Submit Request
+                Send
               </button>
             </div>
 
