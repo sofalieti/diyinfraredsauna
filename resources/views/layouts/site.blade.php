@@ -175,7 +175,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         
         <script type="text/javascript" src="{!! asset('/js/app.js?'.rand(1,1000)) !!}"></script>
-        <script type="text/javascript" src="{!! asset('/libs/diy_calculator/stepper_app.js?v3') !!}"></script> 
+        <script type="text/javascript" src="{!! asset('/libs/diy_calculator/stepper_app.js?v3') !!}"></script>
+        
+        <!-- Modal Debug Script -->
+        <script>
+        $(document).ready(function() {
+            console.log('Bootstrap version:', typeof $().modal);
+            console.log('jQuery version:', jQuery.fn.jquery);
+            
+            // Debug modal triggers
+            $('[data-toggle="modal"]').on('click', function(e) {
+                console.log('Modal trigger clicked:', $(this).attr('data-target'));
+                var target = $(this).attr('data-target');
+                var modal = $(target);
+                console.log('Target modal found:', modal.length > 0);
+                
+                // Force show modal if Bootstrap isn't working
+                if (modal.length > 0 && !modal.hasClass('show')) {
+                    console.log('Attempting to show modal manually');
+                    setTimeout(function() {
+                        if (!modal.hasClass('show')) {
+                            modal.addClass('show').css('display', 'block');
+                            $('body').addClass('modal-open');
+                            console.log('Modal shown manually');
+                        }
+                    }, 100);
+                }
+            });
+            
+            // Debug modal events
+            $('.modal').on('show.bs.modal', function() {
+                console.log('Modal show event:', this.id);
+            });
+            
+            $('.modal').on('hidden.bs.modal', function() {
+                console.log('Modal hidden event:', this.id);
+            });
+            
+            // Manual close button handler
+            $('.modal .close, [data-dismiss="modal"]').on('click', function() {
+                console.log('Close button clicked');
+                var modal = $(this).closest('.modal');
+                modal.removeClass('show').css('display', 'none');
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
+            });
+            
+            // Click outside modal to close
+            $('.modal').on('click', function(e) {
+                if (e.target === this) {
+                    console.log('Background clicked, closing modal');
+                    $(this).removeClass('show').css('display', 'none');
+                    $('body').removeClass('modal-open');
+                    $('.modal-backdrop').remove();
+                }
+            });
+        });
+        </script> 
         <script type="text/javascript">
             var recaptcha = [];
             var ReCaptchaCallback = function() {

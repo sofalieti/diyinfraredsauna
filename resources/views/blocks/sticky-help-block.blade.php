@@ -1,7 +1,7 @@
 <!-- Sticky Help Block -->
 @if(request()->route()->getName() == 'home' || request()->getPathInfo() == '/build-your-sauna.html')
 <div id="stickyHelpBlock" class="sticky-help-block" style="display: none;">
-    <button class="sticky-help-close" onclick="closeStickyBlock()">
+    <button class="sticky-help-close">
         <i class="fas fa-times"></i>
     </button>
     <div class="sticky-help-content">
@@ -64,5 +64,21 @@ function closeStickyBlock() {
         document.getElementById('stickyHelpBlock').style.display = 'none';
     }, 300);
 }
+
+// Add touch event listener for mobile devices
+document.addEventListener('DOMContentLoaded', function() {
+    const closeButton = document.querySelector('.sticky-help-close');
+    if (closeButton) {
+        closeButton.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            closeStickyBlock();
+        });
+        
+        closeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeStickyBlock();
+        });
+    }
+});
 </script>
 @endif 
