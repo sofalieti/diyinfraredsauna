@@ -242,34 +242,28 @@
                 <input type="text" name="SingleLine" id="SingleLine" class="form-control" value="" fieldType="1" maxlength="255" placeholder="Your full name" required />
             </div>
 
-            <!-- Phone -->
-            <div class="row mb-3">
-                <div class="col-md-4">
-                    <label for="international_PhoneNumber_countrycodeval" class="form-label">Country Code</label>
-                    <input type="text" compname="PhoneNumber_countrycodeval" name="PhoneNumber_countrycodeval" phoneFormat="1" maxlength="10" id="international_PhoneNumber_countrycodeval" class="form-control" placeholder="+1"/>
-                </div>
-                <div class="col-md-8">
+            <!-- Phone and Email in one row -->
+            <div class="row mb-4">
+                <div class="col-md-6 mb-3">
                     <label for="international_PhoneNumber_countrycode" class="form-label">Phone Number</label>
-                    <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled="true" maxlength="20" value="" fieldType="11" id="international_PhoneNumber_countrycode" class="form-control" placeholder="Your phone number" />
+                    <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" maxlength="20" value="" fieldType="11" id="international_PhoneNumber_countrycode" class="form-control" placeholder="Your phone number" />
                 </div>
-            </div>
-
-            <!-- Email -->
-            <div class="form-group mb-4">
-                <label for="Email" class="form-label">Email</label>
-                <input type="email" maxlength="255" name="Email" id="Email" class="form-control" value="" fieldType="9" placeholder="your@email.com" />
+                <div class="col-md-6 mb-3">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" maxlength="255" name="Email" id="Email" class="form-control" value="" fieldType="9" placeholder="your@email.com" />
+                </div>
             </div>
         </div>
 
         <!-- Navigation Buttons -->
         <div class="step-navigation">
-            <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+            <button type="button" class="btn btn-secondary" id="prevBtn-premade" style="display: none;">
                 <i class="fas fa-arrow-left mr-2"></i>Previous
             </button>
-            <button type="button" class="btn btn-primary" id="nextBtn">
+            <button type="button" class="btn btn-primary" id="nextBtn-premade">
                 Next<i class="fas fa-arrow-right ml-2"></i>
             </button>
-            <button type="submit" class="btn btn-success btn-lg" id="submitBtn" style="display: none;">
+            <button type="submit" class="btn btn-success btn-lg" id="submitBtn-premade" style="display: none;">
                 <i class="fas fa-paper-plane mr-2"></i>Submit Request
             </button>
         </div>
@@ -282,9 +276,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalSteps = 5;
     
     const form = document.getElementById('form');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const submitBtn = document.getElementById('submitBtn');
+    const nextBtn = document.getElementById('nextBtn-premade');
+    const prevBtn = document.getElementById('prevBtn-premade');
+    const submitBtn = document.getElementById('submitBtn-premade');
     
     // Step validation rules
     const stepValidation = {
@@ -305,14 +299,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show specific step
     function showStep(step) {
-        // Hide all steps with explicit style reset
-        document.querySelectorAll('.step-content').forEach(content => {
+        // Hide all steps with explicit style reset - only in pre-made sauna form
+        document.querySelectorAll('#exampleModal_2 .step-content').forEach(content => {
             content.classList.remove('active');
             content.style.display = 'none';
         });
         
-        // Show current step
-        const currentStepElement = document.querySelector(`.step-content[data-step="${step}"]`);
+        // Show current step in pre-made sauna form
+        const currentStepElement = document.querySelector(`#exampleModal_2 .step-content[data-step="${step}"]`);
         if (currentStepElement) {
             currentStepElement.classList.add('active');
             currentStepElement.style.display = 'block';
@@ -329,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update progress bar
     function updateProgressBar(step) {
-        document.querySelectorAll('.progress-step').forEach((progressStep, index) => {
+        document.querySelectorAll('#exampleModal_2 .progress-step').forEach((progressStep, index) => {
             const stepNumber = index + 1;
             
             if (stepNumber < step) {
@@ -344,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Update progress line
-        const progressLine = document.querySelector('.progress-line');
+        const progressLine = document.querySelector('#exampleModal_2 .progress-line');
         if (progressLine) {
             const progressWidth = ((step - 1) / (totalSteps - 1)) * 100;
             
@@ -405,11 +399,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show error message
     function showErrorMessage(message) {
         // Create or update error message
-        let errorDiv = document.querySelector('.step-error-message');
+        let errorDiv = document.querySelector('#exampleModal_2 .step-error-message');
         if (!errorDiv) {
             errorDiv = document.createElement('div');
             errorDiv.className = 'step-error-message alert alert-danger mt-3';
-            document.querySelector(`.step-content[data-step="${currentStep}"]`).appendChild(errorDiv);
+            document.querySelector(`#exampleModal_2 .step-content[data-step="${currentStep}"]`).appendChild(errorDiv);
         }
         
         errorDiv.textContent = message;
@@ -423,47 +417,57 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Hide error message
     function hideErrorMessage() {
-        const errorDiv = document.querySelector('.step-error-message');
+        const errorDiv = document.querySelector('#exampleModal_2 .step-error-message');
         if (errorDiv) {
             errorDiv.style.display = 'none';
         }
     }
     
     // Next button click
-    nextBtn.addEventListener('click', function() {
-        if (validateCurrentStep()) {
-            hideErrorMessage();
-            if (currentStep < totalSteps) {
-                showStep(currentStep + 1);
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            if (validateCurrentStep()) {
+                hideErrorMessage();
+                if (currentStep < totalSteps) {
+                    showStep(currentStep + 1);
+                }
             }
-        }
-    });
+        });
+    }
     
     // Previous button click
-    prevBtn.addEventListener('click', function() {
-        hideErrorMessage();
-        if (currentStep > 1) {
-            showStep(currentStep - 1);
-        }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            hideErrorMessage();
+            if (currentStep > 1) {
+                showStep(currentStep - 1);
+            }
+        });
+    }
     
     // Form submission
-    form.addEventListener('submit', function(e) {
-        if (!validateCurrentStep()) {
-            e.preventDefault();
-            return false;
-        }
-        
-        // Show loading state
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-        submitBtn.disabled = true;
-        
-        // You can add additional validation here if needed
-    });
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            if (!validateCurrentStep()) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Show loading state
+            if (submitBtn) {
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                submitBtn.disabled = true;
+            }
+            
+            // You can add additional validation here if needed
+        });
+    }
     
-    // Auto-advance on radio selection (optional)
-    document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', function() {
+    // Auto-advance on radio selection using event delegation
+    document.addEventListener('change', function(e) {
+        // Check if the changed element is a radio button in our form
+        if (e.target.type === 'radio' && e.target.closest('#exampleModal_2')) {
+            console.log('Radio button changed:', e.target.name, e.target.value);
             hideErrorMessage();
             
             // Auto-advance after a short delay (except for last step)
@@ -474,7 +478,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }, 800);
             }
-        });
+        }
+    });
+    
+    // Add click event delegation for labels to ensure radio buttons work
+    document.addEventListener('click', function(e) {
+        // Check if clicked element is a label in our form
+        if (e.target.classList.contains('radio-label') && e.target.closest('#exampleModal_2')) {
+            const input = e.target.closest('.radio-item').querySelector('input[type="radio"]');
+            if (input && !input.checked) {
+                input.checked = true;
+                // Trigger change event manually
+                input.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+        }
+        // Also handle clicks on elements inside the label
+        else if (e.target.closest('.radio-label') && e.target.closest('#exampleModal_2')) {
+            const label = e.target.closest('.radio-label');
+            const input = label.closest('.radio-item').querySelector('input[type="radio"]');
+            if (input && !input.checked) {
+                input.checked = true;
+                // Trigger change event manually
+                input.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+        }
     });
     
     // Initialize first step immediately

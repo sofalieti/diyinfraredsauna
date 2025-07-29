@@ -1032,8 +1032,8 @@ header svg{
      }
      
      .modal .radio-icon img {
-         width: 32px;
-         height: 32px;
+         width: 64px;
+         height: 64px;
      }
     
     .modal .radio-text {
@@ -1136,8 +1136,8 @@ header svg{
      }
      
      .modal .radio-icon img {
-         width: 28px;
-         height: 28px;
+         width: 56px;
+         height: 56px;
      }
 }
 .project-images.card-columns > a{
@@ -2465,6 +2465,18 @@ h4
     margin-top: 20px;
 }
 
+@media (max-width: 600px) {
+    .zoho-premade-form .radio-group {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .zoho-premade-form .radio-group {
+        grid-template-columns: 1fr;
+    }
+}
+
 .zoho-premade-form .radio-group.person-count {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -2473,10 +2485,13 @@ h4
     position: relative;
 }
 
-.zoho-premade-form .radio-item input[type="radio"] {
+.zoho-premade-form .radio-item input[type="radio"],
+.zoho-premade-form .radio-item input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
+    width: 0;
+    height: 0;
 }
 
 .zoho-premade-form .radio-label {
@@ -2507,18 +2522,17 @@ h4
 }
 
 .radio-icon img {
-    width: 40px;
-    height: 40px;
-    filter: invert(51%) sepia(8%) saturate(426%) hue-rotate(203deg) brightness(94%) contrast(92%);
+    width: 80px;
+    height: 80px;
     transition: all 0.3s ease;
 }
 
-.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label .radio-icon img {
+.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label .radio-icon img,
+.zoho-premade-form .radio-item input[type="checkbox"]:checked + .radio-label .radio-icon img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .zoho-premade-form .radio-label:hover .radio-icon img {
-    filter: invert(49%) sepia(78%) saturate(2476%) hue-rotate(18deg) brightness(94%) contrast(97%);
     transform: scale(1.05);
 }
 
@@ -2535,7 +2549,8 @@ h4
     margin: 0;
 }
 
-.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label {
+.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label,
+.zoho-premade-form .radio-item input[type="checkbox"]:checked + .radio-label {
     background: linear-gradient(135deg, #E47F36 0%, #d66d24 100%);
     border-color: #E47F36;
     transform: translateY(-2px);
@@ -2543,7 +2558,9 @@ h4
 }
 
 .zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label .radio-text,
-.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label .radio-description {
+.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label .radio-description,
+.zoho-premade-form .radio-item input[type="checkbox"]:checked + .radio-label .radio-text,
+.zoho-premade-form .radio-item input[type="checkbox"]:checked + .radio-label .radio-description {
     color: white;
 }
 
@@ -2554,7 +2571,8 @@ h4
     box-shadow: 0 4px 15px rgba(228, 127, 54, 0.2);
 }
 
-.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label:hover {
+.zoho-premade-form .radio-item input[type="radio"]:checked + .radio-label:hover,
+.zoho-premade-form .radio-item input[type="checkbox"]:checked + .radio-label:hover {
     background: linear-gradient(135deg, #d66d24 0%, #c55d1f 100%);
 }
 
@@ -2703,8 +2721,23 @@ h4
 }
 
 @media (max-width: 480px) {
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
     .zoho-form-container {
         padding: 10px;
+        margin: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
     }
     
     .step-number {
@@ -2727,6 +2760,13 @@ h4
         font-size: 1.3rem;
     }
     
+    .zoho-premade-form .radio-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
     .zoho-premade-form .radio-group.person-count {
         grid-template-columns: 1fr;
     }
@@ -2734,10 +2774,13 @@ h4
     .step-navigation {
         flex-direction: column;
         gap: 10px;
+        margin: 0;
+        padding: 0 10px;
     }
     
     .step-navigation .btn {
         width: 100%;
+        max-width: 100%;
     }
     
     .step-navigation .btn-secondary {
@@ -2747,5 +2790,21 @@ h4
     .step-navigation .btn-primary,
     .step-navigation .btn-success {
         order: 1;
+    }
+    
+    .modal-body {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+    
+    .progress-steps {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .progress-step {
+        flex-shrink: 0;
+        min-width: auto;
     }
 }

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-  <rect x="8" y="25" width="24" height="10" fill="#D2691E" stroke="#8B4513" stroke-width="1"/>
-  <polygon points="6,25 20,8 34,25" fill="#8B0000" stroke="#654321" stroke-width="1"/>
-  <rect x="17" y="28" width="6" height="7" fill="#654321" stroke="#4A4A4A" stroke-width="0.5"/>
-  <circle cx="21" cy="31.5" r="0.4" fill="#FFD700"/>
-  <rect x="25" y="27" width="4" height="3" fill="#87CEEB" stroke="#4A4A4A" stroke-width="0.5"/>
+<svg width="1000" height="500" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M163 376L863 198" stroke="black" stroke-width="50" stroke-linecap="round"/>
+<path d="M815 389H165L815 226V389Z" stroke="black" stroke-width="25"/>
 </svg>
