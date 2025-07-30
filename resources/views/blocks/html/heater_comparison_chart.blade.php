@@ -47,7 +47,7 @@
                     <td class="feature-name">How does it Heat You?</td>
                     <td>Ideal for spot treatment.</td>
                     <td>Ideal for full body treatment with even heat distribution.</td>
-                    <td>Great both for spot treatment and full body, with dual action heating.</td>
+                    <td>Great for both spot treatment and full body, with dual action heating.</td>
             </tr>
             <tr>
                     <td class="feature-name">Surface Area</td>

@@ -64,7 +64,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <a href="/" class="m-logo mx-auto d-block d-lg-none"><img src="/images/m_logo.svg" height="46"/></a>
                     <div class="top-btns d-flex">
-                        <a href="/build-your-sauna.html" class="btn top-btn"><i class="fas fa-tools"></i><span class="d-none d-lg-inline"> Configure you DIY Sauna</span></a>
+                        <a href="/build-your-sauna.html" class="btn top-btn"><i class="fas fa-tools"></i><span class="d-none d-lg-inline"> Configure your DIY Sauna</span></a>
                         <a href="#" class="btn top-btn d-block d-lg-none" data-toggle="modal" data-target="#form_1"><i class="far fa-comment"></i></a>
                         <a href="#" class="btn top-btn d-block d-lg-none" data-toggle="modal" data-target="#contactsModal"><i class="fas fa-phone"></i></a>
                     </div>
@@ -84,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-8 phones-block">
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="phone mr-5">
-                                <span>Tool free:</span>
+                                <span>Toll free:</span>
                                 <a href="tel: +1-888-559-(7278)">+1-888-559-PART (7278)</a>
                             </div>
                             <div class="phone mr-5">
@@ -139,7 +139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="modal-body">
                         <div class="phone">
-                            <span>Tool free:</span>
+                            <span>Toll free:</span>
                             <a href="tel: +1-888-559-(7278)">+1-888-559-PART (7278)</a>
                         </div>
                         <div class="phone">

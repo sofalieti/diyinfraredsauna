@@ -8,7 +8,7 @@
         <div class="step-content">
             <form class="f-validate">
                 <h3>Configure your DIY Infrared Sauna</h3>
-                <p class="description text-center"><br>Please enter width,depth and height of your future infrared sauna. <br>We offer many different ranges of voltage that can be applied to your DIY Kit. Voltage ranges from 110v all the way up to 240v.</p>
+                <p class="description text-center"><br>Please enter width, depth and height of your future infrared sauna. <br>We offer many different ranges of voltage that can be applied to your DIY Kit. Voltage ranges from 110v all the way up to 240v.</p>
                 <div class="row">
                     <div class="col-12">
                         <div class="ps-size-block">
@@ -241,8 +241,8 @@
                 </label>
                  <label>
                     <img src="/images/calculator/woodtypes/mymahagany.jpg"/><br/>
-                    <input type="radio" name="pc_wood" value="Mahagany Wood Trim" data-percent="35"/>
-                    Mahagany Wood Trim
+                    <input type="radio" name="pc_wood" value="Mahogany Wood Trim" data-percent="35"/>
+                    Mahogany Wood Trim
                 </label>
             </div>
             <div class="pc-note-block">
@@ -283,8 +283,8 @@
                 </label>
         <label>
                     <img src="/images/calculator/woodtypes/MahaganyWall.jpg"/><br/>
-                    <input type="radio" name="pc_wood_walls" value="Mahagany Walls" data-price="10"/>
-                    Mahagany Walls
+                    <input type="radio" name="pc_wood_walls" value="Mahogany Walls" data-price="10"/>
+                    Mahogany Walls
                 </label>                
             </div>
             <div class="pc-note-block">

@@ -6,7 +6,7 @@
                     <div class="faq-item">
                         <div class="faq-question">What type of credit cards do you accept?</div>
                         <div class="faq-answer">
-                            <p>We accept all major credit cards such as Visa, MasterCard, and Discover. We do not accept American Express.</p>
+                            <p>We accept all major credit cards such as Visa, MasterCard, Discover, and American Express.</p>
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@
                     <div class="faq-item">
                         <div class="faq-question">What is an RMA number and why do I need it?</div>
                         <div class="faq-answer">
-                            <p>An RMA (Return Merchandise Authorization) is a numbered authorization provided by InfraredSaunaParts to permit the return of a product. We require this to avoid unnecessary returns. Any Warranty Claims, Return Order, etc., require an RMA number. Do not ship your item until a unique RMA number is issued to you via e-mail. We will not accept packages without an RMA number, therefore you package will be returned to the sender.</p>
+                            <p>An RMA (Return Merchandise Authorization) is a numbered authorization provided by InfraredSaunaParts to permit the return of a product. We require this to avoid unnecessary returns. Any Warranty Claims, Return Order, etc., require an RMA number. Do not ship your item until a unique RMA number is issued to you via e-mail. We will not accept packages without an RMA number, therefore your package will be returned to the sender.</p>
         </div>
     </div>
 

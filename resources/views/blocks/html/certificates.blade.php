@@ -88,7 +88,7 @@
                     </div>
                     <div class="certificate-content">
                         <h4 class="certificate-title">BBB RATED</h4>
-                        <p class="certificate-text">Adhereance to business ethics, codes and guidelines. (Without a single complaint.)</p>
+                        <p class="certificate-text">Adherence to business ethics, codes and guidelines. (Without a single complaint.)</p>
             </div>
         </div>
             </div>

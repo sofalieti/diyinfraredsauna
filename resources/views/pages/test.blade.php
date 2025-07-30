@@ -220,7 +220,7 @@
                         Ideal for full body treatment with even heat distribution.
                     </td>
                     <td>
-                        Great both for spot treatment and full body, with dual action heating.
+                        Great for both spot treatment and full body, with dual action heating.
                     </td>
                 </tr>
                 <tr>
@@ -373,7 +373,7 @@
                 </div>
                 <div class="col-md-10 text">
                     <p>Let us put a smile on your face
-                        At DIY Infrared Sauna, our dream is your dream. Building a state of the art, customizable infrared sauna for a realistic price. Our success is fully built on our customers' trust. We depend on them, and we realize the importance of our professional integrity by providing a high-quality product and a superior customer service. In situations, where we can offer a cheaper alternative, that would allow to get the job done, we will offer it with no hesitation. DIY Infrared Sauna has a goal of providing the ultimate highly-satisfactory experience.<br><br>
+                        At DIY Infrared Sauna, our dream is your dream. Building a state of the art, customizable infrared sauna for a realistic price. Our success is fully built on our customers' trust. We depend on them, and we realize the importance of our professional integrity by providing a high-quality product and superior customer service. In situations, where we can offer a cheaper alternative, that would allow us to get the job done, we will offer it with no hesitation. DIY Infrared Sauna has a goal of providing the ultimate highly-satisfactory experience.<br><br>
                         “What drives and motivates us, is a customer with a smile on their face. Only then we know we did good." Team Leader<br><br>
                         We pride ourselves in providing the lowest prices on the market for a top-quality products. DIY Infrared Sauna does not only price match but also offers an additional 10% off! We aren't the leading company for nothing!</p>
                 </div>
@@ -599,7 +599,7 @@
             <div class="col-md-4"><div class="item">
                     <h4>BBB RATED</h4>
                     <img  class=" w-100" src="/images/elements/sert_8.jpg">        
-                    Adhereance to business ethics, codes and guidelines. (Without a single complaint.)
+                    Adherence to business ethics, codes and guidelines. (Without a single complaint.)
                 </div>
             </div>
             <div class="col-md-4"><div class="item">

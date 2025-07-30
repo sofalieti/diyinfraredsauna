@@ -4,7 +4,7 @@
         <div class="description wow fadeIn" data-wow-delay="0.8s" data-wow-duration="1.3s">
             
         </div>
-        <a href="/build-your-sauna.html" class="btn btn-primary mt-3 btn-lg wow fadeIn" data-wow-delay="0.8s" data-wow-duration="1.3s"><i class="fas fa-tools"></i> Configure you DIY Sauna</a>
+        <a href="/build-your-sauna.html" class="btn btn-primary mt-3 btn-lg wow fadeIn" data-wow-delay="0.8s" data-wow-duration="1.3s"><i class="fas fa-tools"></i> Configure your DIY Sauna</a>
     </div>
 </div>            
 <video autoplay="" loop="" muted="" poster="/videos/DIY.jpg">
